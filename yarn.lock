@@ -225,9 +225,9 @@ aurelia-metadata@^1.0.0, aurelia-metadata@^1.0.3:
   dependencies:
     aurelia-pal "^1.0.0"
 
-aurelia-onsenui@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/aurelia-onsenui/-/aurelia-onsenui-0.2.0.tgz#8e0d1810bf0ac79b85a04e2fb590881ea5e7cf1b"
+aurelia-onsenui@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/aurelia-onsenui/-/aurelia-onsenui-0.2.1.tgz#8c1b155c1bed457bb9451e0eee829e37f2b4aabc"
   dependencies:
     aurelia-binding "^1.2.1"
     aurelia-dependency-injection "^1.3.0"
