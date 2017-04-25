@@ -1,0 +1,43 @@
+{
+  "name": "aurelia-onsenui-kitchensink",
+  "version": "0.0.0",
+  "description": "Aurelia Onsen UI Kitchen Sink Example",
+  "main": "src/main.js",
+  "repository": "git@github.com:sidloki/aurelia-onsenui-kitchensink.git",
+  "author": "Marco Strobel <mail@strobel.ch>",
+  "license": "MIT",
+  "scripts": {
+    "build": "scripts/build.js",
+    "export": "scripts/export.js",
+    "serve": "scripts/serve.js",
+    "watch": "scripts/watch.js"
+  },
+  "dependencies": {
+    "aurelia-bootstrapper": "^2.1.1",
+    "aurelia-framework": "^1.1.1",
+    "aurelia-onsenui": "^0.2.0",
+    "systemjs": "^0.20.11",
+    "systemjs-plugin-text": "^0.0.9"
+  },
+  "devDependencies": {
+    "babel-plugin-syntax-flow": "^6.18.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "browser-sync": "^2.18.8",
+    "connect-history-api-fallback": "^1.3.0",
+    "fs-extra-promise": "^1.0.1",
+    "systemjs-builder": "^0.16.4",
+    "systemjs-configurator": "^0.4.1",
+    "systemjs-plugin-babel": "^0.0.21"
+  },
+  "overrides": {
+    "onsenui": {
+      "directories": {
+        "lib": "."
+      }
+    },
+    "systemjs-plugin-text": {
+      "name": "text"
+    }
+  }
+}

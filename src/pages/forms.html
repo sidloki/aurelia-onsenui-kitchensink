@@ -1,0 +1,98 @@
+<template>
+  <ons-page>
+    <ons-toolbar>
+      <div class="left"><ons-back-button>Back</ons-back-button></div>
+      <div class="center">${title}</div>
+    </ons-toolbar>
+    <ons-list>
+      <ons-list-header>Text input</ons-list-header>
+      <ons-list-item modifier="nodivider">
+        <label class="left" for="name">
+          <ons-icon icon="md-face" class="list-item__icon"</ons-icon>
+        </label>
+        <div class="center">
+          <ons-input type="text" value.bind="name" placeholder="What's your name?" modifier="" float input-id="name"></ons-input>
+        </div>
+      </ons-list-item>
+      <ons-list-item modifier="nodivider">
+        <div class="right" style="color:#666">
+          Hello ${name || 'anonymous'}! <ons-icon icon="fa-hand-spock-o" size="lg" style="margin-left:10px;"></ons-icon>
+        </div>
+      </ons-list-item>
+      <ons-list-header>Switches</ons-list-header>
+      <ons-list-item>
+        <label class="center" for="switch1">
+          Switch (${switch1 ? 'on' : 'off'})
+        </label>
+        <div class="right">
+          <ons-switch input-id="switch1" value.bind="switch1"></ons-switch>
+        </div>
+      </ons-list-item>
+      <ons-list-item>
+        <label class="center" for="switch2" style="${switch1 ? '' : 'opacity:0.5;'}">
+          ${switch1 ? 'Switch enabled' : 'Switch disabled'} (${switch2 ? 'on' : 'off'})
+        </label>
+        <div class="right">
+          <ons-switch input-id="switch2" value.bind="switch2" disabled.bind="!switch1"></ons-switch>
+        </div>
+      </ons-list-item>
+      <ons-list-header>Select</ons-list-header>
+      <ons-list-item>
+        <div class="center">
+          <ons-select style="width: 100px" value.bind="selectedOption">
+            <option repeat.for="option of options" value.bind="option.value">
+              ${option.name}
+            </option>
+          </ons-select>
+        </div>
+        <div class="right" style="color:#666">
+          ${selectedOption} is awesome!
+        </div>
+      </ons-list-item>
+      <ons-list-header>Radio buttons</ons-list-header>
+      <ons-list-item repeat.for="vegetable of vegetables" tappable>
+        <label class="left">
+          <ons-input type="radio" name="vegetables" input-id="radio-${$index}" value.bind="vegetable" checked.bind="selectedVegetable" disabled.bind="vegetable === 'Chocolate' ? 'disabled' : ''"></ons-input>
+        </label>
+        <label for="radio-${$index}" class="center" style="${vegetable === 'Chocolate' ? 'opacity:0.5;' : ''}">
+          ${vegetable}
+        </label>
+      </ons-list-item>
+      <ons-list-item>
+        <div class="center">
+          I love ${selectedVegetable}!
+        </div>
+      </ons-list-item>
+      <ons-list-header>Checkboxes - [${checkedColors}]</ons-list-header>
+      <ons-list-item repeat.for="color of colors" tappable>
+        <label class="left">
+          <ons-input type="checkbox" name="colors" input-id="checkbox-${$index}" value.bind="color" checked.bind="checkedColors" disabled.bind="color === 'Blue' ? true : false"></ons-input>
+        </label>
+        <label for="checkbox-${$index}" class="center" style="${color === 'Blue' ? 'opacity:0.5;' : ''}">
+          ${color}
+        </label>
+      </ons-list-item>
+      <ons-list-header>Range slider</ons-list-header>
+      <ons-list-item>
+        Adjust the volume:
+        <ons-row>
+          <ons-col width="40px" style="text-align: center; line-height: 31px;">
+            <ons-icon icon="md-volume-down"></ons-icon>
+          </ons-col>
+          <ons-col>
+
+            <ons-range value.bind="volume" style="width: 100%;"></ons-range>
+
+          </ons-col>
+          <ons-col width="40px" style="text-align: center; line-height: 31px;">
+            <ons-icon icon="md-volume-up"></ons-icon>
+          </ons-col>
+        </ons-row>
+        <ons-row>
+          <ons-col width="30%">Volume: ${volume}</ons-col>
+          <ons-col style="text-align:center;"><span show.bind="volume > 80">(be careful, that's loud)</span></ons-col>
+        </ons-row>
+      </ons-list-item>
+    </ons-list>
+  </ons-page>
+</template>

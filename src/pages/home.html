@@ -1,0 +1,12 @@
+<template>
+  <ons-page>
+    <ons-toolbar>
+      <div class="center">${router.title}</div>
+    </ons-toolbar>
+    <ons-list>
+      <ons-list-item repeat.for="item of router.navigation" modifier="chevron" tappable click.trigger="itemClick(item)">
+        ${item.title}
+      </ons-list-item>
+    </ons-list>
+  </ons-page>
+</template>
