@@ -16,6 +16,7 @@
     "aurelia-bootstrapper": "^2.1.1",
     "aurelia-framework": "^1.1.1",
     "aurelia-onsenui": "^0.2.1",
+    "es6-promise": "^4.1.0",
     "systemjs": "^0.20.11",
     "systemjs-plugin-text": "^0.0.9"
   },

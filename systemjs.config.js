@@ -6,6 +6,7 @@ SystemJS.config({
     "aurelia-bootstrapper": "node_modules/aurelia-bootstrapper/dist/commonjs",
     "aurelia-framework": "node_modules/aurelia-framework/dist/commonjs",
     "aurelia-onsenui": "node_modules/aurelia-onsenui/dist/commonjs",
+    "es6-promise": "node_modules/es6-promise/lib",
     "text": "node_modules/systemjs-plugin-text",
     "aurelia-event-aggregator": "node_modules/aurelia-event-aggregator/dist/commonjs",
     "aurelia-history": "node_modules/aurelia-history/dist/commonjs",
@@ -42,6 +43,9 @@ SystemJS.config({
     },
     "node_modules/aurelia-onsenui/dist/commonjs": {
       "main": "aurelia-onsenui.js"
+    },
+    "node_modules/es6-promise/lib": {
+      "main": "dist/es6-promise.js"
     },
     "node_modules/systemjs-plugin-text": {
       "main": "text"
